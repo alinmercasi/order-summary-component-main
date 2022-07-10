@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/mobile-first-solution-using-flexbox-and-custom-properties-ZIMLMkpI8-)
+- Solution URL: [View solution](https://www.frontendmentor.io/solutions/mobile-first-solution-using-flexbox-and-custom-properties-ZIMLMkpI8-)
 - Live Site URL: [View live demo](https://alinmercasi.github.io/order-summary-component-main/)
 
 ## My process
