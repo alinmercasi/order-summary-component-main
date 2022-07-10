@@ -15,7 +15,6 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
     - [What I learned](#what-i-learned)
     - [Continued development](#continued-development)
       - [For this project](#for-this-project)
-    - [Useful resources](#useful-resources)
   - [Author](#author)
 
 ## Overview
@@ -32,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://alinmercasi.github.io/order-summary-component-main/)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/mobile-first-solution-using-flexbox-and-custom-properties-ZIMLMkpI8-)
 - Live Site URL: [View live demo](https://alinmercasi.github.io/order-summary-component-main/)
 
 ## My process
@@ -58,13 +57,7 @@ Users should be able to:
   #### For this project
   - I would like to add some micro interactions with javascript
 
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
 ## Author
 
 - Alin Mercasi
 - Frontend Mentor - [@alinmercasi](https://www.frontendmentor.io/profile/alinmercasi)
-- Github - [alinmercasi](https://github.com/alinmercasi)
