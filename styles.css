@@ -1,30 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
 :root {
   --pale-blue: hsl(225, 100%, 94%);
   --bright-blue: hsl(245, 75%, 52%);
   --very-pale-blue: hsl(225, 100%, 98%);
   --desaturated-blue: hsl(224, 23%, 55%);
+  --active-blue: hsl(253, 60%, 57%);
   --dark-blue: hsl(223, 47%, 23%);
-  --dark-blue-alpha: hsla(223, 47%, 23%, 0.2);
+  --dark-alpha: hsla(0, 0%, 0%, 0.2);
 
   --font-size-s: 0.75rem;
+  --font-size-sm: 0.9rem;
   --font-size-m: 1rem;
-  --font-size-l: 1.25rem;
-  --font-size-xl: 1.5rem;
-  --font-size-xxl: 3rem;
+  --font-size-l: 1.375rem;
 
+  --size-xs: 0.75rem;
+  --size-s: 1rem;
   --size-m: 1.25rem;
+  --size-l: 1.75rem;
+
+  --box-shadow: 0 0.75rem 1.25rem var(--dark-alpha);
 }
 
 html {
   font-size: 16px;
 }
 body {
-  background-image: url("./images/pattern-background-mobile.svg");
-  background-size: cover;
+  background: url("./images/pattern-background-mobile.svg"), var(--pale-blue);
+  background-size: contain;
+  background-repeat: no-repeat;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Red Hat Display", -apple-system, BlinkMacSystemFont, "Ubuntu",
+    sans-serif;
+  line-height: 1.55;
+  color: var(--desaturated-blue);
+  padding: 0 var(--size-m);
 }
 
 *,
@@ -36,16 +49,114 @@ body {
 }
 
 .container {
-  max-width: 94vw;
-  background: var(--very-pale-blue);
-  box-shadow: 0 0.25rem 2rem var(--dark-blue-alpha);
-  border-radius: 1.1rem;
+  max-width: calc(100vw - var(--size-m) * 2);
+  padding: 0 0 var(--size-s);
+  background: white;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--size-m);
   display: flex;
-  jusutify-content: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-@media only screen and (min-width: 23.4375rem) {
+header {
+  margin-bottom: var(--size-m);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: var(--font-size-l);
+  color: var(--dark-blue);
+  font-weight: 900;
+  margin-bottom: var(--size-m);
+}
+.summary {
+  text-align: center;
+  padding: 0 var(--size-l);
+  margin-bottom: var(--size-m);
+}
+.plan {
+  width: calc(100% - var(--size-m) * 2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--size-m);
+  margin: 0 var(--size-l) var(--size-m);
+  background: var(--very-pale-blue);
+  border-radius: var(--size-xs);
+}
+
+h3 {
+  font-size: var(--font-size-sm);
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+span {
+  font-size: var(--font-size-sm);
+}
+a {
+  font-size: var(--font-size-s);
+  font-weight: 700;
+}
+
+button {
+  display: block;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: 900;
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: var(--size-m);
+}
+.proceed {
+  background: var(--bright-blue);
+  color: var(--very-pale-blue);
+  width: calc(100% - var(--size-m) * 2);
+  padding: var(--size-s);
+  border-radius: var(--size-xs);
+  box-shadow: var(--box-shadow);
+}
+.cancel {
+  background: transparent;
+  color: var(--desaturated-blue);
+}
+a:active {
+  color: var(--active-blue);
+}
+.proceed:active {
+  background: var(--active-blue);
+}
+.cancel:active {
+  color: var(--dark-blue);
+}
+
+@media only screen and (min-width: 25rem) {
   body {
     background-image: url("./images/pattern-background-desktop.svg");
+  }
+  .container {
+    max-width: 25rem;
+  }
+  a:hover {
+    color: var(--active-blue);
+  }
+  .proceed:hover {
+    background: var(--active-blue);
+  }
+  .cancel:hover {
+    color: var(--dark-blue);
   }
 }
