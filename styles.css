@@ -50,7 +50,6 @@ body {
 *::before,
 *::after {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -150,7 +149,11 @@ a:focus {
 
 @media (min-width: 25rem) {
   body {
-    background-image: url("./images/pattern-background-desktop.svg");
+    background: url("./images/pattern-background-desktop.svg"), var(--pale-blue);
+    /* Why do I have to specify again these two properties, if they are specified in global stylesheet>
+    Where the cascading rule did go? :) */
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
