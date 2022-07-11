@@ -40,7 +40,6 @@ body {
   font-family: "Red Hat Display", system-ui, sans-serif;
   line-height: 1.55;
   color: var(--desaturated-blue);
-  padding: 0 var(--size-m);
 }
 /* body * {
   outline: 1px solid red;
@@ -54,7 +53,7 @@ body {
 }
 
 .container {
-  /* Don't have to use calc() on compare functions like min(), max() or clamp */
+  /* Don't have to use calc() on compare functions like min(), max() or clamp() */
   width: min(100vw - var(--size-xs) * 2, var(--breakpoint));
   padding: 0 0 var(--size-s);
   background: white;
@@ -75,27 +74,29 @@ main {
   padding: 0 var(--size-m);
 }
 
+main:not(:last-child) {
+  gap: var(--size-m);
+}
+
 .hero {
-  width: 100%;
+  min-width: 100%;
 }
 
 h1 {
   font-size: var(--font-size-l);
   color: var(--dark-blue);
   font-weight: var(--font-weight-strong);
-  margin-bottom: var(--size-m);
+  margin-bottom: var(--size-xs);
+  line-height: 1;
 }
 .summary {
   text-align: center;
-  padding: 0 var(--size-l);
-  margin-bottom: var(--size-m);
 }
 .plan {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--size-m);
-  margin: 0 0 var(--size-m);
+  padding: var(--size-m) var(--size-s);
   background: var(--very-pale-blue);
   border-radius: var(--size-xs);
 }
@@ -122,7 +123,6 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
-  margin-bottom: var(--size-m);
 }
 .proceed {
   background: var(--bright-blue);
